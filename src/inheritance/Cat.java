@@ -20,6 +20,11 @@ public class Cat extends Pet {
         this.lives = lives;
     }
 
+    // SECOND CAT CONSTRUCTOR == OVER LOADING!
+    public Cat(String name, int age, String colour) {
+        this(name, age, colour, 9);
+    }
+
     public int getLives() {
         return lives;
     }
@@ -31,5 +36,10 @@ public class Cat extends Pet {
                 + "  Age: " + this.getAge() + "  Colour: "
                 + this.getColour() + "  Live: " + this.lives;
         return output;
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("MEOW");
     }
 }

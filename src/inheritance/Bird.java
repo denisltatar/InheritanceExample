@@ -8,6 +8,22 @@ package inheritance;
  *
  * @author tatad6701
  */
-public class Bird {
-    
+public class Bird extends Pet {
+
+    public Bird(String name, int age, String colour) {
+        super(name, age, colour);
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("I tawt I taw a putty cat");
+    }
+
+    // OVERLOADING! *
+    public void speak(int numTimes) {
+        for (int i = 0; i < numTimes; i++) {
+            System.out.println("TWEET");
+        }
+        System.out.println("");
+    }
 }
